@@ -1,0 +1,15 @@
+{
+  "name": "settimeout-test",
+  "main": "./lib/settimeout-test",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "activationEvents": ["settimeout-test:toggle"],
+  "repository": "https://github.com/atom/settimeout-test",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+    "when": "*"
+  }
+}

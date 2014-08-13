@@ -1,0 +1,16 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.overlayer':
+      'Enable settimeout-test': 'settimeout-test:toggle'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'settimeout-test'
+      'submenu': [
+        { 'label': 'Toggle', 'command': 'settimeout-test:toggle' }
+      ]
+    ]
+  }
+]
