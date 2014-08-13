@@ -5,12 +5,12 @@ fdescribe 'Library test', ->
   promise = null
 
   it 'waits for promise to be resolved', ->
+    jasmine.unspy(window, 'setTimeout')
     promise = library.foo()
-    console.log promise
 
-  waitsFor ->
-    (promise != null) && (promise.inspect().state != 'pending')
+    waitsFor ->
+      (promise != null) && (promise.inspect().state != 'pending')
 
-  runs ->
-    expect(promise).not.toBe(null)
-    expect(promise.inspect().state).toBe('fulfilled')
+    runs ->
+      expect(promise).not.toBe(null)
+      expect(promise.inspect().state).toBe('fulfilled')
